@@ -1,0 +1,86 @@
+@font-face {
+  font-family: "NanumMyeongjoExtraBold";
+  src: url("NanumMyeongjoExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MaplestoryBold";
+  src: url("MaplestoryBold.ttf") format("truetype");
+}
+
+* {
+  font-family: "MaplestoryBold";
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 375px;
+}
+
+#header {
+  background-color: #83939b;
+}
+
+#article {
+  background-color: #ffffff;
+  position: absolute;
+  top: 40px;
+  height: calc(100vh - 40px);
+  width: 375px;
+}
+
+#header h1 {
+  font-family: "NanumMyeongjoExtraBold";
+  color: #ffffff;
+  font-size: 40px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+
+#content {
+  padding: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+#roomListContainer {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#roomList {
+  margin-top: 10px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  max-height: 600px;
+  overflow: auto;
+}
+
+#roomList::-webkit-scrollbar {
+  display: none;
+}
+
+#roomList li {
+  background-color: #dbe0de;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  color: #000000;
+  border: 1px solid #000000;
+  border-radius: 10px;
+}

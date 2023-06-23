@@ -2,6 +2,7 @@ package com.example.freshcare.Domain;
 
 import javax.persistence.*;
 @Entity
+@Table(name = "LAUNDRYROOM")
 public class LaundryRoom {
     @Id
     @Column(name = "LAUNDRYIDX")

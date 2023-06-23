@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link th:href="@{/css/selectWasher.css}" rel="stylesheet">
+
+    <title>FreshCare</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>FreshCare</h1>
+    </div>
+    <div id="article">
+      <div id="content">
+        <p>세탁기 선택</p>
+        <div class="listContainer">
+          <ul class="list">
+            <th:block th:each="machiens : ${machiens}">
+              <li class="notUsing">
+                <div class="index" th:id="${machiens.}" th:text="${machiens.machienName}">1</div>
+                <div class="statusContainer">
+                  <div class="canUse" th:text="${machiens.machienStatus}></div>
+                </div>
+                <div class="useButton">세탁기 이용하기</div>
+              </li>
+            </th:block>
+
+
+
+
+            <li class="using">
+              <div class="index">2</div>
+              <div class="statusContainer">
+                <div class="cannotUse">사용완료</div>
+                <div class="reportButton"></div>
+              </div>
+              <div class="stop">종료하기</div>
+              <div class="callButtonContainer"><div class="canCallButton"></div></div>
+            </li>
+            <li class="using">
+              <div class="index">3</div>
+              <div class="statusContainer">
+                <div class="cannotUse">사용중</div>
+              </div>
+              <div class="time">1M</div>
+              <div class="callButtonContainer"><div class="cannotCallButton"></div></div>
+            </li>
+            <li class="using">
+              <div class="index">4</div>
+              <div class="statusContainer">
+                <div class="cannotUse">사용중</div>
+              </div>
+              <div class="time">1M</div>
+              <div class="callButtonContainer"><div class="cannotCallButton"></div></div>
+            </li>
+            <li class="using">
+              <div class="index">5</div>
+              <div class="statusContainer">
+                <div class="cannotUse">사용중</div>
+              </div>
+              <div class="time">1M</div>
+              <div class="callButtonContainer"><div class="cannotCallButton"></div></div>
+            </li>
+            <li class="using">
+              <div class="index">6</div>
+              <div class="statusContainer">
+                <div class="cannotUse">사용중</div>
+              </div>
+              <div class="time">1M</div>
+              <div class="callButtonContainer"><div class="cannotCallButton"></div></div>
+            </li>
+          </ul>
+        </div>
+        <br />
+        <br />
+        <p>HUFS DORM A 건조기 선택</p>
+        <div class="listContainer">
+          <ul class="list">
+            <li class="notUsing">
+              <div class="index">1</div>
+              <div class="statusContainer">
+                <div class="canUse">이용가능</div>
+              </div>
+              <div class="useButton">건조기 이용하기</div>
+            </li>
+            <li class="using">
+              <div class="index">2</div>
+              <div class="statusContainer">
+                <div class="cannotUse">사용중</div>
+              </div>
+              <div class="time">1M</div>
+              <div class="callButtonContainer"><div class="cannotCallButton"></div></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

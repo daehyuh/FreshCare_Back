@@ -6,7 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserService {
@@ -19,7 +21,7 @@ public class UserService {
     }
 
     public Long save(User user){
-        user.setUserPw(passwordEncoder.encode(user.getUserPw()));
+//        user.setUserPw(passwordEncoder.encode(user.getUserPw()));
         userRepository.save(user);
         return user.getUserIdx();
     }
@@ -27,5 +29,15 @@ public class UserService {
     public List<User> findAll(){
         return userRepository.findAll();
     }
+
+    public List<User> findByUserRoom(String room){
+        return userRepository.findByUserRoom(room);
+    }
+
+    public boolean existsByuserIdx(Long id){
+        return userRepository.existsByuserIdx(id);
+    }
+
+
 
 }

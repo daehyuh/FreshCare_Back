@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>user list</th>
+      </tr>
+      </thead>
+      <tbody>
+      <td th:text="인덱스"></td>
+      <td th:text="호실"></td>
+
+      <tr th:each="LaundryRoom : ${LaundryRoom}">
+        <td th:text="${LaundryRoom.laundryIDX}"></td>
+        <td th:text="${LaundryRoom.laundryName}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div> <!-- /container -->
+</body>
+</html>
