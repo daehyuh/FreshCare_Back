@@ -16,7 +16,7 @@ public interface MachienRepository {
     @Query("SELECT m FROM Machien m WHERE m.LaundryIdx = ?1 and m.machienType = ?2 order by m.machienName")
     List<Machien> selectByLaundryIdx(Long id, Long type);
 
-    @Query("SELECT to_char(m.washTime,'HH24:MI') FROM Machien m WHERE m.machienIdx = ?1")
+    @Query("SELECT to_char(m.washTime,'HH24:MI:SS') FROM Machien m WHERE m.machienIdx = ?1")
     String getTime(Long id);
 
     @Transactional

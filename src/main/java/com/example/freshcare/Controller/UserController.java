@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -68,8 +69,13 @@ public class UserController {
          //로그인필요
             System.out.println("존재");
                 machienService.joinUser(MACHIENIDX, id);
+                SimpleDateFormat transFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
                 Calendar cal1 = Calendar.getInstance();
+                cal1.setTime(new Date()); // 시간 설정
+
                 cal1.add(Calendar.MINUTE, time);
+            cal1.add(Calendar.HOUR, 9);
                 machienService.joinDate(MACHIENIDX, new Date(cal1.getTimeInMillis()));
 //
         }
