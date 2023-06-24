@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "NanumMyeongjoExtraBold";
+  src: url("NanumMyeongjoExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MaplestoryBold";
+  src: url("MaplestoryBold.ttf") format("truetype");
+}
+
+* {
+  font-family: "MaplestoryBold";
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 375px;
+}
+
+#header {
+  background-color: #83939b;
+}
+
+#article {
+  background-color: #ffffff;
+  position: absolute;
+  top: 40px;
+  height: calc(100vh - 40px);
+  width: 375px;
+}
+
+#header h1 {
+  font-family: "NanumMyeongjoExtraBold";
+  color: #ffffff;
+  font-size: 40px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+
+#content {
+  padding: 20px;
+  padding-top: 40px;
+  text-align: center;
+}
+
+#inputContainer {
+  margin-top: 20px;
+  background-color: #182c44;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#washer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+#index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+}
+
+.inputBoxContainer {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #ffffff;
+}
+
+.inputBoxContainerText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+}
+
+.inputBox {
+  height: 30px;
+  width: 145px;
+  padding-left: 5px;
+}
+
+#confirmButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 30px;
+  background-color: #dbe0de;
+  height: 40px;
+  width: 80px;
+  border-radius: 10px;
+}

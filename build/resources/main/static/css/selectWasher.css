@@ -1,0 +1,187 @@
+@font-face {
+  font-family: "NanumMyeongjoExtraBold";
+  src: url("NanumMyeongjoExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "MaplestoryBold";
+  src: url("MaplestoryBold.ttf") format("truetype");
+}
+
+* {
+  font-family: "MaplestoryBold";
+  border: 0px;
+  margin: 0px;
+  padding: 0px;
+}
+
+html {
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  width: 375px;
+}
+
+#header {
+  background-color: #83939b;
+}
+
+#article {
+  background-color: #ffffff;
+  position: absolute;
+  top: 40px;
+  height: calc(100vh - 40px);
+  width: 375px;
+}
+
+#header h1 {
+  font-family: "NanumMyeongjoExtraBold";
+  color: #ffffff;
+  font-size: 40px;
+  padding-top: 6px;
+  padding-left: 10px;
+}
+
+#content {
+  padding: 20px;
+  text-align: center;
+}
+
+.listContainer {
+  background-color: #182c44;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.list {
+  margin: 10px;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: 50px;
+  grid-gap: 10px;
+  height: 250px;
+  overflow: auto;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.using {
+  background-color: #dbe0de;
+  height: 40px;
+  width: 305px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 30px 120px 100px 40px;
+  grid-gap: 5px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.notUsing {
+  background-color: #dbe0de;
+  height: 40px;
+  width: 305px;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 30px 120px 145px;
+  grid-gap: 5px;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.index {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  border: 1px solid #000000;
+}
+
+.statusContainer {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.canUse {
+  width: 120px;
+}
+
+.cannotUse {
+  width: 80px;
+  margin-right: 10px;
+  text-align: right;
+}
+
+.reportButton {
+  height: 25px;
+  width: 25px;
+  background-image: url("report.png");
+  background-size: 25px;
+}
+
+.useButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  font-size: 14px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.stop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.callButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.canCallButton {
+  height: 30px;
+  width: 30px;
+  background-image: url("call.png");
+  background-size: 30px;
+}
+
+.cannotCallButton {
+  height: 30px;
+  width: 30px;
+  background-image: url("call.png");
+  background-size: 30px;
+  opacity: 0.2;
+}

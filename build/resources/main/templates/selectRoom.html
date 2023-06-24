@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link th:href="@{/css/selectRoom.css}" rel="stylesheet">
+
+    <title>FreshCare</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>FreshCare</h1>
+    </div>
+    <div id="article">
+      <div id="content">
+        <p>HUFS DORM 세탁실 선택</p>
+        <div id="roomListContainer">
+          <ul id="roomList" >
+            <th:block th:each="LaundryRoom : ${LaundryRoom}">
+              <li th:id="${LaundryRoom.getLaundryIDX()}" th:text="${LaundryRoom.laundryName}"></li>
+            </th:block>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

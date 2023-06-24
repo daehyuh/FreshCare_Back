@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+<div class="container">
+  <div>
+    <table>
+      <thead>
+      <tr>
+        <th>user list</th>
+      </tr>
+      </thead>
+      <tbody>
+      <td th:text="인덱스"></td>
+      <td th:text="호실"></td>
+      <td th:text="이메일"></td>
+      <td th:text="전화번호"></td>
+      <td th:text="비밀번호"></td>
+
+      <tr th:each="user : ${user}">
+        <td th:text="${user.userIdx}"></td>
+        <td th:text="${user.userRoom}"></td>
+        <td th:text="${user.userMail}"></td>
+        <td th:text="${user.userPhone}"></td>
+        <td th:text="${user.userPw}"></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div> <!-- /container -->
+</body>
+</html>

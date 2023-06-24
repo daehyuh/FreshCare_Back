@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link th:href="@{/css/report.css}" rel="stylesheet">
+
+    <title>FreshCare</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>FreshCare</h1>
+    </div>
+    <div id="article">
+      <div id="content">
+        <h1>신고하시겠습니까?</h1>
+        <div class="inputBox"><input type="radio" name="reason" value="호출 응답 없음" />&nbsp;호출 응답 없음</div>
+        <div class="inputBox"><input type="radio" name="reason" value="세탁물 제거안함" />&nbsp;세탁물 제거안함</div>
+        <div class="inputBox"><input type="radio" name="reason" value="기타" />&nbsp;기타</div>
+        <div class="report">
+          <div class="reportButton"></div>
+          신고하기
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
